@@ -23,10 +23,6 @@
     spacing: 0px;
     text-color: @nord4;
 }
-#window {
-    location: north;
-    width: 33%;
-}
 #inputbar {
     text-color: @nord3;
     padding: 6px;
