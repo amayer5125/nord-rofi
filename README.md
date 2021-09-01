@@ -1,6 +1,6 @@
 # Nord Rofi Theme
 
-A [Rofi](https://github.com/davatorium/rofi) theme based on [Nord](https://github.com/arcticicestudio/nord) theme by Arctic Ice Studio
+A [Rofi](https://github.com/davatorium/rofi) theme based on [Nord](https://github.com/arcticicestudio/nord) theme by Arctic Ice Studio.
 
 ![Screenshot of Rofi with Nord Theme](screenshot.jpg)
 
@@ -8,16 +8,17 @@ A [Rofi](https://github.com/davatorium/rofi) theme based on [Nord](https://githu
 
 ### Installation
 
-Copy nord.rasi to the rofi configuration directory at ~/.config/rofi/.
+Copy nord.rasi to the rofi configuration themes directory at ~/.config/rofi/themes.
 
-```
-curl -o ~/.config/rofi/nord.rasi https://raw.githubusercontent.com/amayer5125/nord-rofi/master/nord.rasi
+```sh
+mkdir -p ~/.config/rofi/themes
+curl -o ~/.config/rofi/themes/nord.rasi https://raw.githubusercontent.com/amayer5125/nord-rofi/master/nord.rasi
 ```
 
 Then add the following line to your [rofi configuration](https://github.com/davatorium/rofi/wiki/Configuring-Rofi) file, usually located at ~/.config/rofi/config.rasi.
 
 ```
-theme: "nord";
+@theme "nord"
 ```
 
 ### Optional
@@ -25,12 +26,15 @@ theme: "nord";
 Download and add [Roboto Condensed](https://fonts.google.com/specimen/Roboto+Condensed) font to rofi configuration file.
 
 ```
-font: "Roboto Condensed 16";
+configuration {
+    font: "Roboto Condensed 16";
+}
 ```
 
-Other recomendations are, changing the default width and moving rofi to the top of the screen.
+My other recommendation is moving rofi to the top of the screen.
 
 ```
-width: 33;
-location: 2;
+configuration {
+    location: 2;
+}
 ```
